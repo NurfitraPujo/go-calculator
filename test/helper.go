@@ -1,13 +1,16 @@
 package test
 
-import "testing"
+import (
+	"fmt"
+	"testing"
 
-func PrintError(got, want int, t *testing.T) {
-	t.Errorf("expected '%d' but got '%d'", want, got)
+	"github.com/stretchr/testify/assert"
+)
+
+func notEqualMessage(got, want int) string {
+	return fmt.Sprintf("expected '%d' but got '%d'", want, got)
 }
 
-func AssertEqual(got, want int) {
-	if got != want {
-		PrintError(got, want, &testing.T{})
-	}
+func AssertEqual(t *testing.T, got, want int) {
+	assert.Equal(t, got, want, notEqualMessage(got, want))
 }
