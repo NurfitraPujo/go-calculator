@@ -11,6 +11,13 @@ func TestSubstract(t *testing.T) {
 		assertEqual(result, expect)
 	})
 
+	t.Run("does return absolute value of the substraction result", func(t *testing.T) {
+		result := Absolute(Substract(2, 4))
+		expect := 2
+
+		assertEqual(result, expect)
+	})
+
 }
 
 func printError(got, want int, t *testing.T) {
