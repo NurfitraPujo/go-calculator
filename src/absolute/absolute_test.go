@@ -1,6 +1,10 @@
 package absolute
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/NurfitraPujo/go-calculator/test"
+)
 
 func TestAbsolute(t *testing.T) {
 
@@ -8,17 +12,7 @@ func TestAbsolute(t *testing.T) {
 		result := Absolute(-2)
 		expect := 2
 
-		assertEqual(result, expect)
+		test.AssertEqual(result, expect)
 	})
 
-}
-
-func printError(got, want int, t *testing.T) {
-	t.Errorf("expected '%d' but got '%d'", want, got)
-}
-
-func assertEqual(got, want int) {
-	if got != want {
-		printError(got, want, &testing.T{})
-	}
 }
