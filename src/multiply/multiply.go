@@ -1,5 +1,5 @@
 package multiply
 
-func Multiply(x,y int) int {
-	return 0
+func Multiply(x, y int) int {
+	return x * y
 }

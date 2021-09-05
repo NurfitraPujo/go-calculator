@@ -12,7 +12,7 @@ func TestAbsolute(t *testing.T) {
 		result := Absolute(-2)
 		expect := 2
 
-		test.AssertEqual(result, expect)
+		test.AssertEqual(t, result, expect)
 	})
 
 }

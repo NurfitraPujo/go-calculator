@@ -11,6 +11,6 @@ func TestMultiply(t *testing.T) {
 		result := Multiply(3, 4)
 		expect := 12
 
-		test.AssertEqual(result, expect, t)
+		test.AssertEqual(t, result, expect)
 	})
 }
