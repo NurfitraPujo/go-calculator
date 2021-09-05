@@ -1,11 +1,11 @@
-package substract
+package absolute
 
 import "testing"
 
-func TestSubstract(t *testing.T) {
+func TestAbsolute(t *testing.T) {
 
-	t.Run("does return substraction of two argument", func(t *testing.T) {
-		result := Substract(4, 2)
+	t.Run("does return absolute value of given number", func(t *testing.T) {
+		result := Absolute(-2)
 		expect := 2
 
 		assertEqual(result, expect)
